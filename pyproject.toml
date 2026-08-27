@@ -1,0 +1,21 @@
+[project]
+name = "llmsurgery"
+version = "0.1.0"
+description = "Extract, inspect, modify, and reinsert transformer layers."
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers",
+    "click",
+]
+
+[project.scripts]
+llmsurgery = "llmsurgery.cli:cli"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["llmsurgery"]
